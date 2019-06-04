@@ -37,6 +37,8 @@
     "gatsby-transformer-json": "^2.1.11",
     "gatsby-transformer-remark": "^2.3.9",
     "gatsby-transformer-sharp": "^2.1.18",
+    "netlify-lambda": "^1.4.13",
+    "node-fetch": "^2.3.0",
     "intersection-observer": "^0.5.1",
     "prop-types": "^15.6.2",
     "react": "^16.8.6",

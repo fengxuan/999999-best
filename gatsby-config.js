@@ -12,6 +12,13 @@ module.exports = {
     `gatsby-transformer-remark`,
     `gatsby-plugin-eslint`,
     {
+      resolve: `gatsby-plugin-netlify-functions`,
+      options: {
+        functionsSrc: `${__dirname}/src/functions`,
+        functionsOutput: `${__dirname}/functions`,
+      },
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `content`,

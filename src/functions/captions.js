@@ -16,13 +16,20 @@ exports.handler = async function(event, context, callback) {
       throw 'No captions found'
       return
     }
+
+    var subtitls = []
+
+    captions.forEach(function(caption){
+      subtitls.push(caption.text)
+    })
+
     callback(null, {
       statusCode: 200,
       headers: {
         'Access-Control-Allow-Origin': '*',
         'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept',
       },
-      body: JSON.stringify(captions)
+      body: subtitls //JSON.stringify(captions)
     })
   } catch(e) {
     callback(e)

@@ -23,13 +23,15 @@ exports.handler = async function(event, context, callback) {
       subtitls.push(caption.text)
     })
 
+    console.log("captions: "+ JSON.stringify(captions));
+
     callback(null, {
       statusCode: 200,
       headers: {
         'Access-Control-Allow-Origin': '*',
         'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept',
       },
-      body: subtitls.join('\n') //JSON.stringify(subtitls)
+      body: JSON.stringify(captions)//subtitls.join('\n') //JSON.stringify(subtitls)
     })
   } catch(e) {
     callback(e)

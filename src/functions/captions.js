@@ -31,7 +31,7 @@ exports.handler = async function(event, context, callback) {
         'Access-Control-Allow-Origin': '*',
         'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept',
       },
-      body: JSON.stringify(captions)//subtitls.join('\n') //JSON.stringify(subtitls)
+      body: subtitls.join('\n') //JSON.stringify(subtitls)
     })
   } catch(e) {
     callback(e)

@@ -13,3 +13,4 @@ yarn-error.log*
 public
 build
 package-lock.json
+yarn.lock
